@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color: powderblue;}
+
+</style>
+</head>
+<body>
+<h1 style= "text-align:center; color:green;font-family : cursive;"> WELCOME TO AWS CLOUD</h1>
+
+<div class="a">
+<form action="/cgi-bin/1.py">
+<h4 style= "text-align:left; color:green;font-family : cursive;">Start/Stop/Terminate Running Instances</h4>
+<select name="start_stop">
+<option value="start_instance" style="font-family:cursive">Start the instance</option>
+<option value="stop_instance" style="font-family:cursive">Stop the instance</option>
+<option value="terminate_instance" style="font-family:cursive">Terminate the instance</option>
+</select>
+<br>
+<input type="text" name="instance_id" placeholder= "Enter instance-id" style="font-family:cursive"/><br> <br>
+<input type="submit" name="submit" value="start_stop"style="font-family:cursive" />
+</form>
+
+<br><br> 
+
+<div class="a">
+<form action="/cgi-bin/1.py">
+<h4 style= "text-align:left; color:green;font-family : cursive;">launch a new instance</h4>
+<input type="text" name="ami_id" placeholder= "Enter your Ami-id"style="font-family:cursive" /><br> <br>
+<input type="text" name="instance_type" placeholder= "Enter instance type"style="font-family:cursive" /><br> <br>
+<input type="text" name="key_name" placeholder= "Enter Key-name"style="font-family:cursive" /><br> <br>
+<input type="text" name="security_group" placeholder= "Enter Security-group"style="font-family:cursive" /><br> <br>
+
+<input type="submit" name="submit" value="launch"style="font-family:cursive" />
+</form>
+
+
+
+<div class="a">
+<form action="/cgi-bin/1.py">
+<h4 style= "text-align:left; color:green;font-family : cursive;">Describe instances</h4>
+<input type="submit" name="submit"  value="describe_instances"style="font-family:cursive" />
+</form>
+
+
+<div class="a">
+<form action="/cgi-bin/k1.py">
+<h4 style= "text-align:left; color:green;font-family : cursive;">Launch S3 Bucket</h4>
+<input type="text" placeholder="Enter a unique bucket name" name="bucket_name"style="font-family:cursive" /><br><br>
+<input type="file" id="img" name="img" style="font-family:cursive" ><br><br>
+<input type="submit" name="submit" value="s3_create" style="font-family:cursive" >
+</form>
+
+
+<div class="a">
+<form action="/cgi-bin/1.py">
+<h4 style= "text-align:left; color:green;font-family : cursive;">Create EBS Volume</h4>
+<input type="text" placeholder="Enter avalibility zone name" name="az_name"style="font-family:cursive"  /><br><br>
+<input type="text" placeholder="Enter volume in 'GB'" name="ebs_size" style="font-family:cursive" ><br><br>
+<input type="submit" name="submit"value="ebs_create" style="font-family:cursive" >
+</form>
+
+
+<div class="a">
+<form action="/cgi-bin/1.py">
+<h4 style= "text-align:left; color:green;font-family : cursive;">Attach EBS volume</h4>
+<input type="text" placeholder="Enter volume-id" name="volume_id"style="font-family:cursive" /><br><br>
+<input type="text" placeholder="Enter your Instance-id" name="instance_id"style="font-family:cursive" ><br><br>
+<input type="text" placeholder="Enter your volume path" name="volume_path"style="font-family:cursive" >
+<button name ="submit" value="device_path"style="font-family:cursive" >View device path</button><br><br>
+<input type="submit" name="submit" value="attach_ebs"style="font-family:cursive" >
+</form>
+
+
+
