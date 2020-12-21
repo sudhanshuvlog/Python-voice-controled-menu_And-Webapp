@@ -9,7 +9,7 @@ import pyttsx3
 import os
 import time
 import subprocess
-server_ip="65.0.31.92" 
+server_ip="" 
 
 
 # In[2]:
@@ -763,6 +763,7 @@ def partition():
 
 
 menu=None
+server_ip=input("enter your server ip: ")
 while(menu!='exit'):
     with sr.Microphone() as source:
         head()
