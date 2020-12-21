@@ -1,0 +1,66 @@
+<style>
+body {background-color:aqua;}
+
+</style>
+
+<body>
+
+
+<h1>Linux Partition</h1>
+<form action="/cgi-bin/part.py"> 
+<h4 style= "text-align:left; color:green;font-family : cursive;">Create LVM Partition</h4>
+<input type="text" placeholder="Write a name for your pv"name="pv_name"style="font-family:cursive"/><br>
+<br>
+<input type="text" placeholder="write the path of volume"name="v_path"style="font-family:cursive"/><br>
+<br>
+<input type="text" placeholder="write a name for your vg" name="vg_name" style="font-family:cursive">
+
+<button name="display_group" value="vg" style="font-family:cursive">Check avliable vg's</button>
+<br><br>
+<input type="text" placeholder="write a name for your lv"name="lv_name"style="font-family:cursive"/ >
+
+<button name="display_group" value="lv" style="font-family:cursive">Check avliable lv's</button>
+<br><br>
+<input type="text" placeholder="Size of your partition"name="lv_size"style="font-family:cursive" >
+<br><br>
+<input type="text" placeholder="folder name to mount your lv"name="folder"style="font-family:cursive" ><br><br>
+<button name="submit" value="create_partition" style="font-family:cursive">create partition</button>
+
+</form>
+
+<form action="/cgi-bin/part.py">
+<h4 style="color:green;font-family:cursive" >Attached volumes<h4>
+<button name="submit" value="fdisk" style="font-family:cursive">View all volumes attached</button>
+</form
+
+
+<form action="/cgi-bin/part.py">
+<h4 style="color:green;font-family:cursive" >Display Groups<h4>
+<select name="display_group">
+<option style="font-family:cursive" value="pv">Display all physical volume</option>
+<option style="font-family:cursive" value="vg">Display all volume group</option>
+<option style="font-family:cursive" value="lv">Display all logical volume</option>
+</select>
+<br><br>
+<button name="submit" value="fdisk" style="font-family:cursive">View all volumes attached</button>
+<input type="submit" name="submit" value="display" style="font-family:cursive"/>
+</form>
+
+
+<form action="/cgi-bin/part.py">
+<h4 style="color:green;font-family:cursive" >Display All Mounts<h4>
+<input type="submit" name="submit" value="display_mount" style="font-family:cursive">
+</form>
+
+<form action="/cgi-bin/part.py">
+<h4 style= "text-align:left; color:green;font-family : cursive;">Extend size of LVMPartition</h4>
+<input type="text" name="volume_path" placeholder="Enter the volume group path" style="font-family:cursive">
+<button name="display_group" value="lv" style="font-family:cursive">Check Volumepath</button>
+<br><br>
+<input type="text" name="volume_increase_size"style="font-family:cursive" placeholder="How much Volume you want to increase">
+<br><br>
+<button name="submit" value="extend_lvm" style="font-family:cursive">Extend LVM size</button>
+</form>
+
+
+
